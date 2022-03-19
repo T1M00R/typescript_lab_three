@@ -3,6 +3,8 @@ let tasks: string[] = [];
 
 addTask("Take out bins");
 listAllTasks();
+deleteTask("Take out bins");
+
 
 
 function addTask(task:string){
@@ -21,5 +23,25 @@ function listAllTasks(){
 
     }
 
+
+}
+
+function deleteTask(task:string){
+
+    for(let i = 0; i < tasks.length; i++){
+        
+        let index:number = tasks.indexOf(task);
+        if (index > -1){
+            tasks.splice(index, 1)
+            console.log("Task " + task + " has been deleted\n");
+            console.log("Length of the array: " + tasks.length);
+
+        }
+            
+        
+    }
+
+    //tasks.pop();
+    
 
 }
