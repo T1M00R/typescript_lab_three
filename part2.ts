@@ -1,4 +1,5 @@
 // let tasks: Array<string> alternative 
+export = {} 
 let tasks: string[] = [];
 
 addTask("Take out bins");
@@ -12,7 +13,7 @@ function addTask(task:string){
     tasks.push(task);
     console.log ("Task "+ task + "inserted into array\n");
     console.log("Length of the array: " + tasks.length);
-
+    return (tasks.length);
 }
 
 function listAllTasks(){
@@ -35,6 +36,7 @@ function deleteTask(task:string){
             tasks.splice(index, 1)
             console.log("Task " + task + " has been deleted\n");
             console.log("Length of the array: " + tasks.length);
+            return tasks.length;
 
         }
             

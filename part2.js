@@ -1,4 +1,4 @@
-// let tasks: Array<string> alternative 
+"use strict";
 var tasks = [];
 addTask("Take out bins");
 listAllTasks();
@@ -6,7 +6,8 @@ deleteTask("Take out bins");
 function addTask(task) {
     tasks.push(task);
     console.log("Task " + task + "inserted into array\n");
-    console.log("Length of the array: " + tasks.length);
+    //console.log("Length of the array: " + tasks.length);
+    return ("Length of the array: " + tasks.length);
 }
 function listAllTasks() {
     for (var i = 0; i < tasks.length; i++) {
@@ -24,3 +25,4 @@ function deleteTask(task) {
     }
     //tasks.pop();
 }
+module.exports = {};
